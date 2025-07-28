@@ -15,7 +15,10 @@ const texture_map = {
 var values: Array = []
 
 func _ready() -> void:
-	score_label.text = '0'
+	score_label.text = ''
+
+func get_score_text(score: int):
+	return '' if score == 0 else str(score)
 
 func add_value(value: int):
 	if value < 1 or value > 6:
@@ -31,9 +34,9 @@ func add_value(value: int):
 	texture_rect.texture = texture_map[value]
 	texture_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	texture_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-	texture_rect.custom_minimum_size = Vector2(112, 112)
+	texture_rect.custom_minimum_size = Vector2(100, 100)
 	add_child(texture_rect)
-	score_label.text = str(get_score())
+	score_label.text = get_score_text(get_score())
 
 
 func remove_all_of_value(value: int):
@@ -50,7 +53,7 @@ func remove_all_of_value(value: int):
 
 	# Update score label if applicable
 	if score_label:
-		score_label.text = str(get_score())
+		score_label.text = get_score_text(get_score())
 
 func clear():
 	values.clear()

@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://bcsjyrsivx4h3" path="res://assets/three.png" id="4_w5xrm"]
 
 [node name="Column" type="VBoxContainer"]
-custom_minimum_size = Vector2(0, 350)
+custom_minimum_size = Vector2(0, 300)
 offset_right = 40.0
 offset_bottom = 40.0
 size_flags_horizontal = 3
-theme_override_constants/separation = 20
+theme_override_constants/separation = 15
 alignment = 2
 script = ExtResource("1_mam7m")
 

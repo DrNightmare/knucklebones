@@ -12,7 +12,7 @@ script = ExtResource("1_sp8yt")
 position = Vector2(781, 557)
 
 [node name="EnemyBoard" parent="." instance=ExtResource("2_fvj3h")]
-position = Vector2(781, 0)
+position = Vector2(781, 41)
 
 [node name="ColumnSelector" type="Sprite2D" parent="."]
 position = Vector2(1102, 975)
