@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://u6bu3dharl10"]
+
+[ext_resource type="Script" path="res://board_manager.gd" id="1_sp8yt"]
+[ext_resource type="PackedScene" uid="uid://bgky2cvnfsp1a" path="res://scenes/player_board.tscn" id="2_fvj3h"]
+[ext_resource type="Script" path="res://scenes/column_selector.gd" id="3_1giln"]
+[ext_resource type="Texture2D" uid="uid://bcs3fmf5rv7an" path="res://assets/MediumArrow-Right@2x.png" id="3_rvi0i"]
+
+[node name="BoardManager" type="Node2D"]
+script = ExtResource("1_sp8yt")
+
+[node name="PlayerBoard" parent="." instance=ExtResource("2_fvj3h")]
+position = Vector2(781, 557)
+
+[node name="EnemyBoard" parent="." instance=ExtResource("2_fvj3h")]
+position = Vector2(781, 0)
+
+[node name="ColumnSelector" type="Sprite2D" parent="."]
+position = Vector2(1102, 975)
+rotation = -1.5708
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_rvi0i")
+script = ExtResource("3_1giln")
+
+[node name="RolledDie" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(112, 112)
+offset_left = 387.0
+offset_top = 432.0
+offset_right = 427.0
+offset_bottom = 472.0
+expand_mode = 1
+stretch_mode = 5

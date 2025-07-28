@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccuxubi6ynf87"]
+
+[ext_resource type="Script" path="res://scenes/column.gd" id="1_mam7m"]
+[ext_resource type="Texture2D" uid="uid://clsl0fp28kxfy" path="res://assets/six.png" id="2_n05dj"]
+
+[node name="Column" type="VBoxContainer"]
+custom_minimum_size = Vector2(0, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 2
+script = ExtResource("1_mam7m")
+
+[node name="TextureRect5" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_n05dj")
+
+[node name="TextureRect6" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_n05dj")
+
+[node name="TextureRect7" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("2_n05dj")

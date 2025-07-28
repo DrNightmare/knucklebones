@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgky2cvnfsp1a"]
+
+[ext_resource type="Script" path="res://scenes/player_board.gd" id="1_5rwvv"]
+[ext_resource type="PackedScene" uid="uid://ccuxubi6ynf87" path="res://scenes/column.tscn" id="1_fpt5s"]
+
+[node name="PlayerBoard" type="Node2D"]
+script = ExtResource("1_5rwvv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 376.0
+offset_bottom = 451.0
+theme_override_constants/separation = 20
+
+[node name="Column" parent="HBoxContainer" instance=ExtResource("1_fpt5s")]
+layout_mode = 2
+alignment = 0
+
+[node name="Column2" parent="HBoxContainer" instance=ExtResource("1_fpt5s")]
+layout_mode = 2
+alignment = 0
+
+[node name="Column3" parent="HBoxContainer" instance=ExtResource("1_fpt5s")]
+layout_mode = 2
+alignment = 0
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 670.0
+offset_top = 151.0
+offset_right = 716.0
+offset_bottom = 206.0
+theme_override_font_sizes/font_size = 40
