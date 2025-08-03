@@ -3,13 +3,13 @@ extends Sprite2D
 # default to middle column
 var current_column_index = 1
 var x_position_map = {
-	0: 838,
-	1: 970,
-	2: 1102,
+	0: 803,
+	1: 969,
+	2: 1141,
 }
 
 func _tween_to_column(index: int) -> void:
-	var target_x = x_position_map[index]
+	var target_x = x_position_map[index] + 25
 	var tween := create_tween()
 	tween.tween_property(self, "position:x", target_x, 0.3).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 

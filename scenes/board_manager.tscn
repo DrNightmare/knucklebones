@@ -9,15 +9,16 @@
 script = ExtResource("1_sp8yt")
 
 [node name="PlayerBoard" parent="." instance=ExtResource("2_fvj3h")]
-position = Vector2(781, 557)
+position = Vector2(781, 822)
 
 [node name="EnemyBoard" parent="." instance=ExtResource("2_fvj3h")]
 position = Vector2(781, 41)
+stack_direction = 1
 
 [node name="ColumnSelector" type="Sprite2D" parent="."]
-position = Vector2(1102, 975)
+position = Vector2(1141, 975)
 rotation = -1.5708
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_rvi0i")
 script = ExtResource("3_1giln")
 

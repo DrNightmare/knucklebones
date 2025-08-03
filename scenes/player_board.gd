@@ -1,13 +1,25 @@
 extends Node
 class_name PlayerBoard
 
+enum Direction { UP, DOWN }
+
+@export var stack_direction: Direction
 @onready var columns = [
-	$HBoxContainer/Column,
-	$HBoxContainer/Column2,
-	$HBoxContainer/Column3
+	$HBoxContainer/CustomColumn,
+	$HBoxContainer/CustomColumn2,
+	$HBoxContainer/CustomColumn3
 ]
 @onready var score_label: Label = $ScoreLabel
 
+func _ready() -> void:
+	reset_board()
+	set_stack_directions(stack_direction)
+		
+
+func set_stack_directions(direction: Direction):
+	for col in columns:
+		col.stack_direction = direction
+	
 func reset_board():
 	for col in columns:
 		col.clear()

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://7bxn71qpyqn8"]
+
+[ext_resource type="Script" path="res://scripts/custom_column.gd" id="1_nttcc"]
+
+[node name="CustomColumn" type="Control"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_nttcc")
+
+[node name="ScoreLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 25
+text = "10"
+horizontal_alignment = 1
