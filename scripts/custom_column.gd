@@ -87,7 +87,7 @@ func get_score() -> int:
 
 func get_entry_position(index: int) -> Vector2:
 	var y_offset := entry_height * index
-	return Vector2(0, y_offset if stack_direction == Direction.DOWN else -y_offset)
+	return Vector2(0, -y_offset if stack_direction == Direction.DOWN else y_offset)
 
 func animate_all_entries():
 	for i in range(sprites.size()):
@@ -103,7 +103,7 @@ func update_score_label_position():
 	var entry_position = get_entry_position(0)
 	var label_offset = entry_height * max_entries
 	match stack_direction:
-		Direction.DOWN:
-			score_label.position = Vector2(entry_position.x + 25, label_offset)
 		Direction.UP:
+			score_label.position = Vector2(entry_position.x + 25, label_offset)
+		Direction.DOWN:
 			score_label.position = Vector2(entry_position.x + 25, -label_offset + 70)

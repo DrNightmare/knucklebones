@@ -9,10 +9,10 @@
 script = ExtResource("1_sp8yt")
 
 [node name="PlayerBoard" parent="." instance=ExtResource("2_fvj3h")]
-position = Vector2(781, 822)
+position = Vector2(781, 583)
 
 [node name="EnemyBoard" parent="." instance=ExtResource("2_fvj3h")]
-position = Vector2(781, 41)
+position = Vector2(781, 387)
 stack_direction = 1
 
 [node name="ColumnSelector" type="Sprite2D" parent="."]
