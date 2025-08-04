@@ -81,3 +81,9 @@ func choose_random_valid_column_for_enemy() -> int:
 		if not enemy_board.columns[i].is_full():
 			valid_columns.append(i)
 	return valid_columns.pick_random() if valid_columns.size() > 0 else 0
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("restart"):
+		get_tree().reload_current_scene()
+	elif event.is_action_pressed("quit"):
+		get_tree().quit()
